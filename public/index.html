@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulários</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Formulário de Usuário</h1>
+  <form id="userForm">
+    <input type="text" name="nome" placeholder="Nome completo" required />
+    <input type="number" name="idade" placeholder="Idade" required />
+    <input type="text" name="nacionalidade" placeholder="Nacionalidade" />
+    <input type="text" name="profissao" placeholder="Profissão" required />
+    <textarea name="bio" placeholder="Bio" required></textarea>
+    <input type="text" name="hobbies" placeholder="Hobbies" />
+    <button type="submit">Enviar Usuário</button>
+  </form>
+
+  <h1>Formulário de Endereço</h1>
+  <form id="addressForm">
+    <input type="text" name="rua" placeholder="Rua" required />
+    <input type="text" name="bairro" placeholder="Bairro" required />
+    <input type="number" name="numero" placeholder="Número" required />
+    <input type="text" name="cep" placeholder="CEP" required />
+    <input type="text" name="cidade" placeholder="Cidade" required />
+    <input type="text" name="uf" placeholder="UF" required maxlength="2" />
+    <button type="submit">Enviar Endereço</button>
+  </form>
+
+  <script src="js/formValidation.js"></script>
+</body>
+</html>
