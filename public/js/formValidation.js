@@ -1,18 +1,18 @@
-document.getElementById("userForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+document.getElementById('formCadastro').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = new FormData(e.target);
+      const data = Object.fromEntries(form.entries());
 
-  const nome = this.nome.value;
-  const profissao = this.profissao.value;
-  const bio = this.bio.value;
+      const response = await fetch('/api/usuarios', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
 
-  const nomeValido = /^[A-Za-zÀ-ÿ\s]{1,200}$/.test(nome);
-  const profissaoValida = /^[A-Za-zÀ-ÿ\s]{1,50}$/.test(profissao);
-  const bioValida = /^[\w\s.,!?]{1,400}$/.test(bio);
-
-  if (!nomeValido || !profissaoValida || !bioValida) {
-    alert("Erro de validação nos campos do formulário.");
-    return;
-  }
-
-  // Enviar via fetch() para backend
-});
+      if (response.ok) {
+        alert('Usuário cadastrado!');
+        e.target.reset();
+      } else {
+        alert('Erro ao cadastrar.');
+      }
+    });

@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Formulários</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Cadastro Unificado</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Formulário de Usuário</h1>
-  <form id="userForm">
-    <input type="text" name="nome" placeholder="Nome completo" required />
-    <input type="number" name="idade" placeholder="Idade" required />
-    <input type="text" name="nacionalidade" placeholder="Nacionalidade" />
-    <input type="text" name="profissao" placeholder="Profissão" required />
-    <textarea name="bio" placeholder="Bio" required></textarea>
-    <input type="text" name="hobbies" placeholder="Hobbies" />
-    <button type="submit">Enviar Usuário</button>
+  <h1>Cadastro de Usuário</h1>
+  <form id="formCadastro">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <input name="nome" placeholder="Nome completo" required maxlength="200" pattern="[A-Za-z\s]+" />
+      <input name="idade" placeholder="Idade" required type="number" />
+      <input name="nacionalidade" placeholder="Nacionalidade" required />
+      <input name="profissao" placeholder="Profissão" required maxlength="50" pattern="[A-Za-z\s]+" />
+      <textarea name="bio" placeholder="Bio (até 400 caracteres)" maxlength="400"></textarea>
+      <input name="hobbies" placeholder="Hobbies" maxlength="150" />
+    </fieldset>
+    
+    <fieldset>
+      <legend>Endereço</legend>
+      <input name="rua" placeholder="Rua" maxlength="200" required />
+      <input name="bairro" placeholder="Bairro" maxlength="200" required />
+      <input name="numero" placeholder="Número" required type="number" />
+      <input name="cep" placeholder="CEP" pattern="\d{8}" required />
+      <input name="cidade" placeholder="Cidade" maxlength="50" required />
+      <input name="uf" placeholder="UF (ex: SP)" maxlength="2" pattern="[A-Z]{2}" required />
+    </fieldset>
+
+    <button type="submit">Enviar</button>
   </form>
 
-  <h1>Formulário de Endereço</h1>
-  <form id="addressForm">
-    <input type="text" name="rua" placeholder="Rua" required />
-    <input type="text" name="bairro" placeholder="Bairro" required />
-    <input type="number" name="numero" placeholder="Número" required />
-    <input type="text" name="cep" placeholder="CEP" required />
-    <input type="text" name="cidade" placeholder="Cidade" required />
-    <input type="text" name="uf" placeholder="UF" required maxlength="2" />
-    <button type="submit">Enviar Endereço</button>
-  </form>
-
-  <script src="js/formValidation.js"></script>
+  <script>
+  </script>
 </body>
 </html>
