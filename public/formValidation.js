@@ -4,7 +4,6 @@ document.getElementById("formCadastro").addEventListener("submit", async functio
   const formData = new FormData(this);
   const data = {};
 
-  // Preenche os dados do usuário e endereço
   for (const [key, value] of formData.entries()) {
     if (['rua', 'bairro', 'numero', 'cep', 'cidade', 'uf'].includes(key)) {
       if (!data.endereco) data.endereco = {};

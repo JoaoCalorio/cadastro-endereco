@@ -1,7 +1,6 @@
 const UsuarioService = require('../services/UsuarioService');
 const service = new UsuarioService();
 
-// Listar todos os usuários
 exports.getUsuarios = async (req, res) => {
   try {
     console.log("Buscando todos os usuários...");
@@ -15,7 +14,6 @@ exports.getUsuarios = async (req, res) => {
   }
 };
 
-// Criar novo usuário
 exports.postUsuario = async (req, res) => {
   const dados = req.body;
   try {
@@ -32,7 +30,6 @@ exports.postUsuario = async (req, res) => {
   }
 };
 
-// Deletar usuário por ID
 exports.deleteUsuario = async (req, res) => {
   try {
     console.log("Tentando deletar usuário com ID:", req.params.id);

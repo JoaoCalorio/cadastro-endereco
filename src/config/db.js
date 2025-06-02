@@ -1,7 +1,7 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-// Pool de conexões com configurações do container Docker
+
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
