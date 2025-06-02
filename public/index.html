@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Cadastro Unificado</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <h1>Cadastro de Usuário</h1>
-  <form id="formCadastro">
+  <form id="formCadastro" method="POST" action="/api/usuarios">
     <fieldset>
       <legend>Dados Pessoais</legend>
       <input name="nome" placeholder="Nome completo" required maxlength="200" pattern="[A-Za-z\s]+" />
@@ -32,6 +32,7 @@
   </form>
 
   <script>
-  </script>
+
+</script>
 </body>
 </html>
