@@ -9,22 +9,22 @@ body {
   background-color: #121212;
   color: #f0f0f0;
   font-family: Arial, sans-serif;
-  padding: 2rem;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   color: #ffffff;
 }
 
 form {
   background-color: #1e1e1e;
-  padding: 2rem;
+  padding: 32px;
   border-radius: 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   width: 100%;
   max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -32,13 +32,13 @@ form {
 
 fieldset {
   border: 1px solid #333;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
+  padding: 16px;
+  margin-bottom: 24px;
   border-radius: 6px;
 }
 
 legend {
-  padding: 0 0.5rem;
+  padding: 0 8px;
   font-weight: bold;
   color: #00bfff;
 }
@@ -47,11 +47,11 @@ form input,
 form textarea,
 form button {
   width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
+  margin-bottom: 16px;
+  padding: 12px;
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 form input,
@@ -76,16 +76,4 @@ form button:hover {
   background-color: #0056b3;
 }
 
-/* Responsivo simples */
-@media (max-width: 600px) {
-  form {
-    padding: 1rem;
-  }
 
-  form input,
-  form textarea,
-  form button {
-    font-size: 0.95rem;
-    padding: 0.65rem;
-  }
-}
